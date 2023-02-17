@@ -28,6 +28,8 @@
         "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
       }
     ],
-    "react-hooks/rules-of-hooks": "off"
+    "react-hooks/rules-of-hooks": "off",
+    "react/no-unescaped-entities": "off",
+    "import/no-anonymous-default-export": "off"
   }
 }
