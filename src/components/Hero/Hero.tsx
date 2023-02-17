@@ -1,15 +1,17 @@
-import { TriangleDownIcon } from '@chakra-ui/icons';
+import { DownloadIcon, TriangleDownIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
   Center,
   Heading,
   Icon,
+  Link,
   Text,
   chakra,
 } from '@chakra-ui/react';
 import { TargetAndTransition, motion } from 'framer-motion';
 import Image from 'next/image';
+import NextLink from 'next/link';
 
 const MotionImage = chakra(motion.img);
 const MotionIcon = chakra(motion.div);
@@ -23,9 +25,14 @@ const animation = (value: number): TargetAndTransition => ({
   },
 });
 
-export default function Hero() {
+export default function Hero({
+  title,
+  subtitle,
+  ButtonText,
+  LinkDestination,
+}: Props) {
   return (
-    <Box h="100vh" pos="relative">
+    <Box h="100vh" pos="relative" as="section" id="Home">
       <Image
         src="/images/hero.jpg"
         alt="Hero"
@@ -51,24 +58,40 @@ export default function Hero() {
             height="128"
           />
           <Heading size="4xl" fontWeight="bold" as="h1">
-            OpenMC
+            {title || 'Default title'}
           </Heading>
         </Center>
         <Text fontSize="2xl" as="h2" textAlign="center" width="24rem">
-          An open source Minecraft launcher and mod manager
+          {subtitle || 'Default subtitle'}
         </Text>
-        <Button colorScheme="blue" variant="solid" size="lg">
-          Download
-        </Button>
-        <MotionIcon
-          animate={animation(10)}
-          pos="absolute"
-          bottom={20}
-          style={{ cursor: 'pointer' }}
+        <Button
+          colorScheme="blue"
+          variant="solid"
+          size="lg"
+          leftIcon={<DownloadIcon />}
         >
-          <Icon as={TriangleDownIcon} w={5} h={5} />
-        </MotionIcon>
+          {ButtonText || 'Default ButtonText'}
+        </Button>
+        {LinkDestination && (
+          <Link as={NextLink} href={LinkDestination}>
+            <MotionIcon
+              animate={animation(10)}
+              pos="absolute"
+              bottom={20}
+              style={{ cursor: 'pointer' }}
+            >
+              <Icon as={TriangleDownIcon} w={5} h={5} />
+            </MotionIcon>
+          </Link>
+        )}
       </Center>
     </Box>
   );
 }
+
+type Props = {
+  title: string;
+  subtitle: string;
+  ButtonText: string;
+  LinkDestination?: string;
+};
