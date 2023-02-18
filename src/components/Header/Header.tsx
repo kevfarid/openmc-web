@@ -21,7 +21,7 @@ export default function Header({ title, paths = [] }: Props) {
       <Spacer />
       <Stack direction="row" spacing={4}>
         {paths.map((path) => (
-          <Link as={NextLink} href={path.link} key={path.name}>
+          <Link as={NextLink} href={path.link} key={path.name} scroll={false}>
             {path.name}
           </Link>
         ))}

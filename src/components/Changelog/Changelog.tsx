@@ -25,7 +25,11 @@ export default function Changelog({ title, changes }: Props) {
       >
         {title}
       </Heading>
-      <Card variant="outline" width="65rem" bgColor="transparent">
+      <Card
+        variant="outline"
+        bgColor="transparent"
+        width={{ base: '100%', lg: '65rem' }}
+      >
         <TableContainer>
           <Table variant="simple">
             {changes.length === 0 && (

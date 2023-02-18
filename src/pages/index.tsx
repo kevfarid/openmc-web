@@ -6,6 +6,8 @@ import About from '@/components/About';
 import Changelog from '@/components/Changelog';
 import Downloads from '@/components/Downloads';
 import Tab from '@/components/Downloads/Tab.interface';
+import DiscordJoin from '@/components/DiscordJoin';
+import { Center } from '@chakra-ui/react';
 
 export default function Home() {
   const paths: Path[] = [
@@ -101,6 +103,13 @@ export default function Home() {
       <About cards={cards} />
       <Changelog title="Changelog" changes={[]} />
       <Downloads tabs={tabs} title="Downloads" />
+      <Center as="section" id="discord" mb="40">
+        <DiscordJoin
+          title="You can talk to us directly on our discord server."
+          linkDiscord="#"
+          buttonText="Join Now"
+        />
+      </Center>
     </>
   );
 }

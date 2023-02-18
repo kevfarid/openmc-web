@@ -72,11 +72,12 @@ export default function Hero({
           as={NextLink}
           leftIcon={<DownloadIcon />}
           href={ButtonDestination || '/'}
+          scroll={false}
         >
           {ButtonText || 'Default ButtonText'}
         </Button>
         {LinkDestination && (
-          <Link as={NextLink} href={LinkDestination}>
+          <Link as={NextLink} href={LinkDestination} scroll={false}>
             <MotionIcon
               animate={animation(10)}
               pos="absolute"
