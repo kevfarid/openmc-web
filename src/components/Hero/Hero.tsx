@@ -30,9 +30,10 @@ export default function Hero({
   subtitle,
   ButtonText,
   LinkDestination,
+  ButtonDestination,
 }: Props) {
   return (
-    <Box h="100vh" pos="relative" as="section" id="Home">
+    <Box h="100vh" pos="relative" as="section" id="home">
       <Image
         src="/images/hero.jpg"
         alt="Hero"
@@ -68,7 +69,9 @@ export default function Hero({
           colorScheme="blue"
           variant="solid"
           size="lg"
+          as={NextLink}
           leftIcon={<DownloadIcon />}
+          href={ButtonDestination || '/'}
         >
           {ButtonText || 'Default ButtonText'}
         </Button>
@@ -94,4 +97,5 @@ type Props = {
   subtitle: string;
   ButtonText: string;
   LinkDestination?: string;
+  ButtonDestination?: string;
 };

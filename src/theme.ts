@@ -10,6 +10,7 @@ const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         bg: mode('#fff', '#121212')(props),
+        scrollBehavior: 'smooth',
       },
     }),
   },

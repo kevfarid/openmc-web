@@ -4,20 +4,22 @@ import Path from '@/components/Header/Path';
 import IAboutCard from '@/components/AboutCard/IAboutCard';
 import About from '@/components/About';
 import Changelog from '@/components/Changelog';
+import Downloads from '@/components/Downloads';
+import Tab from '@/components/Downloads/Tab.interface';
 
 export default function Home() {
   const paths: Path[] = [
     {
       name: 'Home',
-      link: '#Home',
+      link: '#home',
     },
     {
       name: 'About',
-      link: '#About',
+      link: '#about',
     },
     {
       name: 'Download',
-      link: '#Download',
+      link: '#download',
     },
   ];
 
@@ -45,6 +47,47 @@ export default function Home() {
     },
   ];
 
+  const tabs: Tab[] = [
+    {
+      name: 'Windows',
+      icon: 'Windows',
+      links: [
+        {
+          name: 'Download Last Version (32/64-bit)',
+          link: '#',
+        },
+      ],
+    },
+    {
+      name: 'MacOS',
+      icon: 'Apple',
+      links: [
+        {
+          name: 'Download for Intel',
+          link: '#',
+        },
+        {
+          name: 'Download for Apple Silicon',
+          link: '#',
+        },
+      ],
+    },
+    {
+      name: 'Linux',
+      icon: 'Linux',
+      links: [
+        {
+          name: 'Download AppImage',
+          link: '#',
+        },
+        {
+          name: 'Download tar.gz',
+          link: '#',
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       <Header title="OpenMc" paths={paths} />
@@ -52,10 +95,12 @@ export default function Home() {
         title="OpenMc"
         subtitle="An open source Minecraft launcher and mod manager"
         ButtonText="Download"
-        LinkDestination="#About"
+        LinkDestination="#about"
+        ButtonDestination="#download"
       />
       <About cards={cards} />
       <Changelog title="Changelog" changes={[]} />
+      <Downloads tabs={tabs} title="Downloads" />
     </>
   );
 }

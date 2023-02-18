@@ -12,6 +12,7 @@ export default function About({ cards }: Props) {
       paddingX={20}
       paddingY={40}
       flexWrap="wrap"
+      id="about"
     >
       {cards.map((card) => (
         <AboutCard
