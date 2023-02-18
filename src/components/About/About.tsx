@@ -10,7 +10,7 @@ export default function About({ cards }: Props) {
       as="section"
       gap="60px"
       paddingX={20}
-      paddingY={40}
+      paddingY={20}
       flexWrap="wrap"
       id="about"
     >

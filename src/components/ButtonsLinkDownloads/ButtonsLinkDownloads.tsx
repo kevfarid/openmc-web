@@ -1,7 +1,8 @@
 import { DownloadIcon } from '@chakra-ui/icons';
-import { Button, Flex, Icon, Link } from '@chakra-ui/react';
+import { Button, Flex, Icon } from '@chakra-ui/react';
 import React from 'react';
 import ILink from './Link.interface';
+import Link from 'next/link';
 
 export default function ButtonsLinkDownloads({ links }: Props) {
   return (
@@ -13,7 +14,7 @@ export default function ButtonsLinkDownloads({ links }: Props) {
           variant="outline"
           as={Link}
           href={link.link}
-          downlaod
+          download
           gap={1}
         >
           <Icon as={DownloadIcon} w={5} h={5} />

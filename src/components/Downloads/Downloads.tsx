@@ -19,7 +19,7 @@ export default function Downloads({ title, tabs }: Props) {
       flexDir="column"
       id="download"
       paddingX={20}
-      paddingBottom={40}
+      paddingBottom={20}
     >
       <Heading
         as="h2"

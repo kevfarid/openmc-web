@@ -15,7 +15,7 @@ import Change from './Change';
 
 export default function Changelog({ title, changes }: Props) {
   return (
-    <Center as="section" flexDir="column" paddingX={20} paddingBottom={40}>
+    <Center as="section" flexDir="column" paddingX={20} paddingBottom={20}>
       <Heading
         as="h2"
         size="xl"
