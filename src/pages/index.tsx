@@ -8,6 +8,8 @@ import Downloads from '@/components/Downloads';
 import Tab from '@/components/Downloads/Tab.interface';
 import DiscordJoin from '@/components/DiscordJoin';
 import { Center } from '@chakra-ui/react';
+import Footer from '@/components/Footer';
+import SocialMedia from '@/components/Footer/SocialMedia';
 
 export default function Home() {
   const paths: Path[] = [
@@ -90,6 +92,24 @@ export default function Home() {
     },
   ];
 
+  const socialMedia: SocialMedia[] = [
+    {
+      name: 'Github',
+      link: '#',
+      icon: 'Github',
+    },
+    {
+      name: 'Twitter',
+      link: '#',
+      icon: 'Twitter',
+    },
+    {
+      name: 'Discord',
+      link: '#',
+      icon: 'Discord',
+    },
+  ];
+
   return (
     <>
       <Header title="OpenMc" paths={paths} />
@@ -110,6 +130,7 @@ export default function Home() {
           buttonText="Join Now"
         />
       </Center>
+      <Footer socialMedia={socialMedia} title="OpenMc" />
     </>
   );
 }
