@@ -6,12 +6,14 @@ import {
   Heading,
   Icon,
   Link,
+  Stack,
   Text,
   chakra,
 } from '@chakra-ui/react';
 import { TargetAndTransition, motion } from 'framer-motion';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import Icons from '../Icons';
 
 const MotionImage = chakra(motion.img);
 const MotionIcon = chakra(motion.div);
@@ -31,6 +33,7 @@ export default function Hero({
   ButtonText,
   LinkDestination,
   ButtonDestination,
+  compatibilityIcons,
 }: Props) {
   return (
     <Box h="100vh" pos="relative" as="section" id="home">
@@ -76,6 +79,11 @@ export default function Hero({
         >
           {ButtonText || 'Default ButtonText'}
         </Button>
+        <Stack direction="row">
+          {compatibilityIcons?.map((icon) => (
+            <Icon key={icon} as={Icons[icon]} boxSize="24px" />
+          ))}
+        </Stack>
         {LinkDestination && (
           <Link as={NextLink} href={LinkDestination} scroll={false}>
             <MotionIcon
@@ -99,4 +107,5 @@ type Props = {
   ButtonText: string;
   LinkDestination?: string;
   ButtonDestination?: string;
+  compatibilityIcons?: string[];
 };

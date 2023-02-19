@@ -119,6 +119,7 @@ export default function Home() {
         ButtonText="Download"
         LinkDestination="#about"
         ButtonDestination="#download"
+        compatibilityIcons={['Windows', 'Apple', 'Linux']}
       />
       <About cards={cards} />
       <Changelog title="Changelog" changes={[]} />
