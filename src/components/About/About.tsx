@@ -14,15 +14,16 @@ export default function About({ cards }: Props) {
       flexWrap="wrap"
       id="about"
     >
-      {cards.map((card) => (
-        <AboutCard
-          name={card.name}
-          description={card.description}
-          icon={card.icon}
-          link={card.link}
-          key={card.name}
-        />
-      ))}
+      {cards &&
+        cards.map((card) => (
+          <AboutCard
+            name={card.name}
+            description={card.description}
+            icon={card.icon}
+            link={card.link}
+            key={card.name}
+          />
+        ))}
     </Stack>
   );
 }

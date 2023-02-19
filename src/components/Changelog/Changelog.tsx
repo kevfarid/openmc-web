@@ -1,3 +1,4 @@
+import useLang from '@/hooks/useLang';
 import {
   Card,
   Center,
@@ -14,6 +15,8 @@ import {
 import Change from './Change';
 
 export default function Changelog({ title, changes }: Props) {
+  const { t } = useLang();
+
   return (
     <Center as="section" flexDir="column" paddingX={20} paddingBottom={20}>
       <Heading
@@ -33,15 +36,13 @@ export default function Changelog({ title, changes }: Props) {
         <TableContainer>
           <Table variant="simple">
             {changes.length === 0 && (
-              <TableCaption>
-                No load changes yet, check back later!
-              </TableCaption>
+              <TableCaption>{t('changelog.no-changes')}</TableCaption>
             )}
             <Thead>
               <Tr borderColor="transparent">
-                <Th>Date</Th>
-                <Th>Change</Th>
-                <Th>Type</Th>
+                <Th>{t('changelog.date')}</Th>
+                <Th>{t('changelog.change')}</Th>
+                <Th>{t('changelog.type')}</Th>
               </Tr>
             </Thead>
             <Tbody>

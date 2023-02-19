@@ -32,20 +32,22 @@ export default function Downloads({ title, tabs }: Props) {
       </Heading>
       <Tabs>
         <TabList width="350px" justifyContent="center">
-          {tabs.map((tab) => (
-            <Tab key={tab.name} gap="10px" textAlign="center">
-              {tab.icon && <Icon as={Icons[tab.icon]} w={5} h={5} />}
-              {tab.name}
-            </Tab>
-          ))}
+          {tabs &&
+            tabs.map((tab) => (
+              <Tab key={tab.name} gap="10px" textAlign="center">
+                {tab.icon && <Icon as={Icons[tab.icon]} w={5} h={5} />}
+                {tab.name}
+              </Tab>
+            ))}
         </TabList>
 
         <TabPanels>
-          {tabs.map((tab) => (
-            <TabPanel key={tab.name}>
-              <ButtonsLinkDownloads links={tab.links} />
-            </TabPanel>
-          ))}
+          {tabs &&
+            tabs.map((tab) => (
+              <TabPanel key={tab.name}>
+                <ButtonsLinkDownloads links={tab.links} />
+              </TabPanel>
+            ))}
         </TabPanels>
       </Tabs>
     </Center>

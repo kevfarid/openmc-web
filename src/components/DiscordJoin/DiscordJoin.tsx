@@ -38,7 +38,7 @@ export default function DiscordJoin({ title, linkDiscord, buttonText }: Props) {
             variant="solid"
             size="lg"
             as={Link}
-            href={linkDiscord}
+            href={linkDiscord || '/'}
           >
             {buttonText}
           </Button>

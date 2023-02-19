@@ -1,0 +1,108 @@
+{
+  "title": "OpenMC",
+  "description": "OpenMC is a Monte Carlo particle transport code based on modern methods. It is capable of modeling neutron, photon, and electron transport with a variety of cross section libraries and models for geometry, cross sections, and tallies. OpenMC is developed by the Computational Reactor Physics Group at MIT and is released under the permissive 3-clause BSD license.",
+  "download": "Download",
+  "hero.compatibility.icons": ["Windows", "Apple", "Linux"],
+  "hero.subtitle": "An open source Minecraft launcher and mod manager",
+  "download.title": "Downloads",
+  "header.paths": [
+    {
+      "name": "Home",
+      "link": "#home"
+    },
+    {
+      "name": "About",
+      "link": "#about"
+    },
+    {
+      "name": "Download",
+      "link": "#download"
+    }
+  ],
+  "download.tabs": [
+    {
+      "name": "Windows",
+      "icon": "Windows",
+      "links": [
+        {
+          "name": "Download Last Version (32/64-bit)",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "MacOS",
+      "icon": "Apple",
+      "links": [
+        {
+          "name": "Download for Intel",
+          "link": "#"
+        },
+        {
+          "name": "Download for Apple Silicon",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "Linux",
+      "icon": "Linux",
+      "links": [
+        {
+          "name": "Download AppImage",
+          "link": "#"
+        },
+        {
+          "name": "Download tar.gz",
+          "link": "#"
+        }
+      ]
+    }
+  ],
+  "changelog.title": "Changelog",
+  "changelog.no-changes": "No changes yet",
+  "changelog.date": "Date",
+  "changelog.change": "Change",
+  "changelog.type": "Type",
+  "discord.title": "You can talk to us directly on our discord server.",
+  "discord.link": "#/home",
+  "discord.button": "Join Now",
+  "about.title": "About",
+  "about.cards": [
+    {
+      "name": "Open Source",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus elit at lectus auctor pretium. Maecenas iaculis dolor ut leo dictum, et tempor nisl ullamcorper. Pellentesque convallis dui nec nulla.",
+      "icon": "/icons/open-source.svg",
+      "link": "#OpenSource"
+    },
+    {
+      "name": "Minimalist",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus elit at lectus auctor pretium. Maecenas iaculis dolor ut leo dictum, et tempor nisl ullamcorper. Pellentesque convallis dui nec nulla.",
+      "icon": "/icons/minimalist.svg",
+      "link": "#CrossPlatform"
+    },
+    {
+      "name": "Free",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus elit at lectus auctor pretium. Maecenas iaculis dolor ut leo dictum, et tempor nisl ullamcorper. Pellentesque convallis dui nec nulla.",
+      "icon": "/icons/manager.svg",
+      "link": "#Free"
+    }
+  ],
+  "footer.social-media": [
+    {
+      "name": "Github",
+      "link": "#",
+      "icon": "Github"
+    },
+    {
+      "name": "Twitter",
+      "link": "twiiter.com",
+      "icon": "Twitter"
+    },
+    {
+      "name": "Discord",
+      "link": "#",
+      "icon": "Discord"
+    }
+  ]
+}

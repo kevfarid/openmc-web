@@ -32,11 +32,12 @@ export default function Footer({ title, socialMedia }: Props) {
       </Heading>
       <Spacer />
       <Stack direction="row" spacing="1rem">
-        {socialMedia.map((social) => (
-          <Link href={social.link} key={social.name}>
-            <Icon as={Icons[social.icon]} boxSize="20px" />
-          </Link>
-        ))}
+        {socialMedia &&
+          socialMedia.map((social) => (
+            <Link href={social.link || '#'} key={social.name}>
+              <Icon as={Icons[social.icon]} boxSize="20px" />
+            </Link>
+          ))}
       </Stack>
     </Stack>
   );
