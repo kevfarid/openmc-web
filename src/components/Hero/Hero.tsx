@@ -42,6 +42,7 @@ export default function Hero({
         alt="Hero"
         fill
         style={{ objectFit: 'cover' }}
+        priority
       />
       <Center
         pos="absolute"

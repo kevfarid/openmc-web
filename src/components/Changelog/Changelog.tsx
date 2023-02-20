@@ -1,4 +1,3 @@
-import useLang from '@/hooks/useLang';
 import {
   Card,
   Center,
@@ -12,6 +11,8 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+
+import useLang from '@/hooks/useLang';
 import Change from './Change';
 
 export default function Changelog({ title, changes }: Props) {
@@ -43,6 +44,7 @@ export default function Changelog({ title, changes }: Props) {
                 <Th>{t('changelog.date')}</Th>
                 <Th>{t('changelog.change')}</Th>
                 <Th>{t('changelog.type')}</Th>
+                <Th>{t('changelog.version')}</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -51,6 +53,7 @@ export default function Changelog({ title, changes }: Props) {
                   <Td>{change.date}</Td>
                   <Td>{change.change}</Td>
                   <Td>{change.type}</Td>
+                  <Td>{change.version}</Td>
                 </Tr>
               ))}
             </Tbody>

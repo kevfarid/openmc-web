@@ -59,9 +59,10 @@
       ]
     }
   ],
-  "changelog.title": "Changelog",
+  "changelog.title": "Last Changes",
   "changelog.no-changes": "No changes yet",
   "changelog.date": "Date",
+  "changelog.version": "Version",
   "changelog.change": "Change",
   "changelog.type": "Type",
   "discord.title": "You can talk to us directly on our discord server.",
